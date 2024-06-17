@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { getSkills } from "@/lib/skills";
 export default async function Home() {
   const skills = await getSkills();
@@ -8,6 +9,7 @@ export default async function Home() {
         {skills.map((item) => (
           <div key={item._id}>{item.label}</div>
         ))}
+        <Button size={"lg"}>Nice</Button>
       </div>
     </main>
   );
