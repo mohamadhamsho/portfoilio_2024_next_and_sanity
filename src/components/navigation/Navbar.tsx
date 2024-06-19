@@ -5,7 +5,7 @@ import { navLinks } from "@/constants/nav_links";
 
 function Navbar() {
   return (
-    <header className=" py-2 z-50 top-0 left-0 w-full bg-background/60 backdrop-blur-md shadow-md">
+    <header className="fixed py-2 z-50 top-0 left-0 w-full bg-background backdrop-blur-md shadow-md">
       <div className="container py-2 flex justify-between items-center">
         <Logo />
         <nav className="hidden md:flex items-center gap-x-4">
