@@ -21,6 +21,7 @@
     "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-simple-typewriter": "^5.0.1",
     "sanity": "^3.46.1",
     "styled-components": "^6.1.11",
     "tailwind-merge": "^2.3.0",

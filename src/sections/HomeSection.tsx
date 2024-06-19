@@ -3,7 +3,9 @@ import { socialLinks } from "@/constants/social_links";
 import { ArrowRightCircle, Download } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-import profileImg from "../../public/me.jpg";
+import profileImg from "../../public/my_photo.png";
+import TypeWriter from "@/components/typewriter/TypeWriter";
+import { Effect } from "@/components/ui/effects";
 function HomeSection() {
   return (
     <section
@@ -24,19 +26,21 @@ function HomeSection() {
         })}
       </ul>
       {/* Presentation */}
-      <div className="md:col-span-6 flex flex-col items-center md:items-start gap-y-4">
+      <div className="md:col-span-8 flex flex-col items-center md:items-start gap-y-4">
         <h2 className="text-3xl md:text-4xl font-bold text-foreground capitalize">
-          Hi, I am MOHAMAD HAMSHO
+          Hi, I am MOHAMAD
         </h2>
         <h5 className="text-xl md:text-2xl font-semibold capitalize">
-          Frontend Developer
+          <TypeWriter />
         </h5>
         <p className="leading-7 md:text-lg md:max-w-[85%] text-center md:text-start">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis neque
-          velit, perspiciatis amet ab itaque consequatur nulla in animi hic
-          optio. Sed assumenda, sit molestias, voluptates beatae commodi est
-          labore asperiores laborum, molestiae dolorem magnam! Voluptatibus
-          expedita minus et blanditiis?
+          My passion for front-end development shines through in every project I
+          work on, as I constantly strive for innovation and excellence. With a
+          keen eye for design and a deep understanding of user experience, I
+          transform complex technical concepts into elegant, user-friendly
+          solutions. I have a deep understanding of the latest technologies and
+          trends in front-end development, and I always stay ahead of the curve
+          to deliver cutting-edge solutions.
         </p>
         <div className="flex items-center gap-2 py-4">
           <a
@@ -58,14 +62,30 @@ function HomeSection() {
         </div>
       </div>
       {/* Image */}
-      <div className="md:col-span-5 grid place-content-center">
+      <div className="md:col-span-2 grid place-content-center">
         <div className="relative flex items-center justify-center size-80 md:size-96">
+          <Effect className="size-full" />
+          <Effect
+            variant="square"
+            size="sm"
+            className="top-[8%] left-[25%] -rotate-12"
+          />
+          <Effect
+            variant="square"
+            size="sm"
+            className="top-[50%] right-[2%] rotate-12"
+          />
+          <Effect
+            variant="square"
+            size="sm"
+            className="bottom-[18%] left-[12%] rotate-6"
+          />
           <Image
             width={420}
             height={420}
             alt="profile"
             src={profileImg}
-            className="object-cover size-[80%] border-2 rounded-full ring-4 ring-primary ring-offset-4 ring-offset-background "
+            className="object-cover size-[75%] border-2 rounded-full ring-4 ring-primary ring-offset-4 ring-offset-background "
           />
         </div>
       </div>
