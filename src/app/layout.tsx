@@ -3,6 +3,9 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/navigation/Navbar";
+import { ThemeProvider } from "@/components/theme-provider";
+import MobileNavigation from "@/components/navigation/MobileNavigation";
+import Footer from "@/components/navigation/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,8 +30,17 @@ export default function RootLayout({
           inter.className)
         }
       >
-        <Navbar />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          <MobileNavigation />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );
