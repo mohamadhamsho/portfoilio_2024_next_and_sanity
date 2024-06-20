@@ -10,7 +10,7 @@ async function SkillsSection() {
   const backendSkills = await getSkills("backend");
   const toolsSkills = await getSkills("tools");
   return (
-    <section id="skills" className="relative container pt-20">
+    <section id="skills" className="relative container pt-20 overflow-x-hidden">
       <Effect className="-right-20 md:-right-36 bottom-8 md:bottom-2" />
       <SectionTitle title="skills" description="my technical proficiency" />
       <Tabs defaultValue={tabsItems[0].value}>
