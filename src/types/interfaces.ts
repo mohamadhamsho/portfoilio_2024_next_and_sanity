@@ -7,10 +7,19 @@ export interface SocialLink {
 export interface NavLink extends SocialLink {
   title: string;
 }
-
+export interface Statistic {
+  label: string;
+  value: number;
+}
+export type SkillCategory = "frontend" | "backend" | "tools";
 export interface Skill {
   _id: string;
   label: string;
   value: number;
-  category: string;
+  category: SkillCategory;
+}
+export interface TabItem {
+  value: SkillCategory;
+  icon: LucideIcon;
+  label: string;
 }

@@ -10,7 +10,7 @@ function HomeSection() {
   return (
     <section
       id="home"
-      className="container min-h-screen grid md:grid-cols-12 items-center gap-4"
+      className="container min-h-screen grid md:grid-cols-12 items-center gap-4 pt-28 md:pt-0"
     >
       {/* Social Icons */}
       <ul className="flex md:flex-col gap-4 items-center size-fit mx-auto py-2 md:py-8 px-8 md:px-2 border rounded-3xl">

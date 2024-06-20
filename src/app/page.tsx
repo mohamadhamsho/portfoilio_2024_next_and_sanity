@@ -5,7 +5,7 @@ import ProjectsSection from "@/sections/ProjectsSection";
 import SkillsSection from "@/sections/SkillsSection";
 export default async function Home() {
   return (
-    <main className="mt-28 md:mt-0">
+    <main className="">
       <HomeSection />
       <AboutSection />
       <SkillsSection />

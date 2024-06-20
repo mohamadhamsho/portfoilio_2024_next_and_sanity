@@ -1,26 +1,28 @@
 import SectionTitle from "@/components/sectionTitle";
 import { buttonVariants } from "@/components/ui/button";
 import { Effect } from "@/components/ui/effects";
+import { getStatistics } from "@/constants/statistics";
 import { cn } from "@/lib/utils";
 import { ArrowRightCircle } from "lucide-react";
 import React from "react";
 
 function AboutSection() {
+  const { statistics } = getStatistics();
   return (
-    <section id="about" className="relative container">
+    <section id="about" className="relative container pt-20">
       <Effect className="-left-32 md:-left-44 -top-12" />
       <article className="relative max-w-[50rem] mx-auto bg-background/90 border rounded-lg p-6 flex flex-col gap-y-6">
         <Effect
           variant="square"
           size="default"
-          className="-top-4 -right-5 -z-10 rotate-12"
+          className="-top-4 -right-3 md:-right-5 -z-10 rotate-12"
         />
         <SectionTitle
           title="about me"
           description="a quick introduction about me"
           className="items-start"
         />
-        <p className="text-lg">
+        <p className="md:text-lg">
           I have a proven track record of delivering high-quality, responsive
           websites and applications that meet the needs of both businesses and
           users, I have a deep understanding of the latest technologies and
@@ -32,22 +34,20 @@ function AboutSection() {
           constantly pushing the boundaries of what is possible to create
           exceptional user experiences.
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 items-end mt-8">
-            <div className="flex flex-col items-center md:items-start">
-              <p className="text-foreground text-2xl md:text-4xl font-bold">
-                +5
-              </p>
-              <p className="whitespace-nowrap text-sm md:text-lg">
-                Years experince
-              </p>
-            </div>
-            <div className="flex flex-col items-center md:items-start">
-              <p className="text-foreground text-2xl md:text-4xl font-bold">
-                +13
-              </p>
-              <p className="whitespace-nowrap text-sm md:text-lg">
-                Completed projects
-              </p>
-            </div>
+            {statistics.map((item, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center md:items-start"
+              >
+                <p className="text-foreground text-2xl md:text-4xl font-bold">
+                  +{item.value}
+                </p>
+                <p className="whitespace-nowrap text-sm md:text-lg">
+                  {item.label}
+                </p>
+              </div>
+            ))}
+
             <a
               href="#skills"
               className={cn(
