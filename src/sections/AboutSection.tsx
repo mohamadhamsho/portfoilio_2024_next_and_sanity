@@ -22,7 +22,7 @@ function AboutSection() {
           description="a quick introduction about me"
           className="items-start"
         />
-        <p className="md:text-lg">
+        <div className="md:text-lg">
           I have a proven track record of delivering high-quality, responsive
           websites and applications that meet the needs of both businesses and
           users, I have a deep understanding of the latest technologies and
@@ -59,7 +59,7 @@ function AboutSection() {
               <ArrowRightCircle className="size-5" />
             </a>
           </div>
-        </p>
+        </div>
       </article>
     </section>
   );

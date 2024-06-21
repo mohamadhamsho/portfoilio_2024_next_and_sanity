@@ -1,5 +1,6 @@
 import { Skill } from "@/types/interfaces";
 import { FC } from "react";
+import SkillItem from "./ui/skill-item";
 
 interface SkillsContainerProps {
   data: Skill[];
@@ -12,8 +13,8 @@ const SkillsContainer: FC<SkillsContainerProps> = ({ data, label }) => {
         {label}
       </h2>
       <div className="px-6 py-4 space-y-6">
-        {data.map((skill, index) => (
-          <p key={index}>{skill.label}</p>
+        {data.map((item) => (
+          <SkillItem key={item._id} item={item} />
         ))}
       </div>
     </article>

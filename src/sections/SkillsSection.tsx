@@ -10,9 +10,16 @@ async function SkillsSection() {
   const backendSkills = await getSkills("backend");
   const toolsSkills = await getSkills("tools");
   return (
-    <section id="skills" className="relative container pt-20 overflow-x-hidden">
+    <section
+      id="skills"
+      className="relative container mt-20 pt-20 overflow-x-hidden md:overflow-x-visible"
+    >
       <Effect className="-right-20 md:-right-36 bottom-8 md:bottom-2" />
-      <SectionTitle title="skills" description="my technical proficiency" />
+      <SectionTitle
+        title="skills"
+        description="my technical proficiency"
+        className="mb-3"
+      />
       <Tabs defaultValue={tabsItems[0].value}>
         <div className="grid md:grid-cols-3 gap-4 md:gap-8">
           {/* tabs List */}
