@@ -10,7 +10,7 @@ const SkillItem: FC<SkillItemProps> = ({ item }) => {
   const [progress, setProgress] = useState<number>(0);
 
   useEffect(() => {
-    const timer = setTimeout(() => setProgress(66), 250);
+    const timer = setTimeout(() => setProgress(item.value), 250);
     return () => clearTimeout(timer);
   }, []);
   return (
