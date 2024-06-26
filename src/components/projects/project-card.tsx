@@ -5,6 +5,7 @@ interface ProjectCardProps {
   imageUrl: string;
   title: string;
 }
+
 const ProjectCard: FC<ProjectCardProps> = ({ imageUrl, title }) => {
   return (
     <article className="relative group border rounded-md shadow cursor-pointer overflow-hidden mt-8">

@@ -19,5 +19,3 @@ export async function getProjects() {
   const data = await client.fetch(query);
   return data as Project[];
 }
-
-export const dynamic = "force-dynamic";
