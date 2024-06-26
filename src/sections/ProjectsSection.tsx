@@ -4,8 +4,6 @@ import { Effect } from "@/components/ui/effects";
 import { getProjects } from "@/lib/projects";
 import React from "react";
 
-export const revalidate = 30; // revalidate at most every hour
-
 const ProjectsSection = async () => {
   const projects = await getProjects();
 
