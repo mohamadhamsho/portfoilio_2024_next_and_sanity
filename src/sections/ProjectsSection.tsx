@@ -4,6 +4,8 @@ import { Effect } from "@/components/ui/effects";
 import { getProjects } from "@/lib/projects";
 import React from "react";
 
+export const revalidate = 5;
+
 const ProjectsSection = async () => {
   const projects = await getProjects();
 
