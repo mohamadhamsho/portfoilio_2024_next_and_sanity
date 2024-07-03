@@ -7,11 +7,11 @@ export const navLinks: NavLink[] = [
     href: "#about",
     icon: User,
   },
-  {
-    title: "services",
-    href: "#services",
-    icon: Server,
-  },
+  // {
+  //   title: "services",
+  //   href: "#services",
+  //   icon: Server,
+  // },
   {
     title: "skills",
     href: "#skills",
