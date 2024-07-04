@@ -6,8 +6,8 @@ import { cn } from "@/lib/utils";
 import { ArrowRightCircle } from "lucide-react";
 import React from "react";
 
-function AboutSection() {
-  const { statistics } = getStatistics();
+async function AboutSection() {
+  const { statistics } = await getStatistics();
   return (
     <section id="about" className="relative container pt-20">
       <Effect className="-left-32 md:-left-44 -top-12" />

@@ -1,6 +1,8 @@
+import { getProjects } from "@/lib/projects";
 import { Statistic } from "@/types/interfaces";
 
-export function getStatistics() {
+export async function getStatistics() {
+  const projects = await getProjects();
   const statistics: Statistic[] = [
     {
       label: "Year experience",
@@ -8,7 +10,7 @@ export function getStatistics() {
     },
     {
       label: "Completed project",
-      value: 5,
+      value: projects.length,
     },
   ];
 
