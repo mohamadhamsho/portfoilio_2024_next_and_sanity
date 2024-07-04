@@ -13,7 +13,7 @@ function Navbar() {
             <a
               key={index}
               href={link.href}
-              className="capitalize font-medium hover:text-foreground hover:text-primary"
+              className="capitalize font-medium hover:text-primary"
             >
               {link.title}
             </a>

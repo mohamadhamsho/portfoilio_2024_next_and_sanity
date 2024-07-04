@@ -6,6 +6,7 @@ import React from "react";
 import profileImg from "../../public/my_photo.png";
 import TypeWriter from "@/components/typewriter/TypeWriter";
 import { Effect } from "@/components/ui/effects";
+
 function HomeSection() {
   return (
     <section

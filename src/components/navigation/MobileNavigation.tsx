@@ -4,7 +4,7 @@ import React from "react";
 function MobileNavigation() {
   return (
     <div className="flex md:hidden fixed bottom-0 left-0 w-full py-4 border-t rounded-t-lg bg-background shadow-lg z-50">
-      <nav className="container flex items-center justify-between sm:justify-evenly">
+      <nav className="container flex items-center justify-evenly sm:justify-evenly">
         {navLinks.map((link, index) => {
           const { title, href, icon: Icon } = link;
           return (
